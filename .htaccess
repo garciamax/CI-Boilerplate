@@ -1,0 +1,19 @@
+Options -Indexes
+# Multiple Environment config
+# Set this to development, staging or production
+SetEnv GRM_ENV development
+
+# Customized error messages.
+ErrorDocument 404 /index.php
+
+# Set the default handler.
+DirectoryIndex index.php
+
+# Various rewrite rules.
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !^/(stats/|missing\.html|failed_auth\.html|assets) [NC]
+  RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+</IfModule> 
