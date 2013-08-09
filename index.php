@@ -37,7 +37,7 @@ if (defined('ENVIRONMENT'))
     {
         case GRM_DEVELOPMENT:
             error_reporting(E_ALL);
-            define('PATH_HTDOCS', dirname(__FILE__));
+            define('PATH_HTDOCS', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
             define('PATH_APP', PATH_HTDOCS . 'app');
             define('PATH_SYSTEM', '');// ---------------------- DEV SYSTEM DIR ---------
@@ -48,7 +48,7 @@ if (defined('ENVIRONMENT'))
 
         case GRM_STAGING:
         case GRM_PRODUCTION:
-            define('PATH_HTDOCS', dirname(__FILE__));
+            define('PATH_HTDOCS', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
             define('PATH_APP', PATH_HTDOCS . 'app/');
             define('PATH_SYSTEM', '');// ------------------------------- PRODUCTION SYSTEM DIR --
