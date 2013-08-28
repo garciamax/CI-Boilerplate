@@ -43,7 +43,7 @@ if (defined('ENVIRONMENT'))
             define('PATH_SYSTEM', '');// ---------------------- DEV SYSTEM DIR ---------
 
             define('LOG_THRESHOLD',4);
-            define('LOG_PATH', PATH_MAIN . 'logs/');
+            define('LOG_PATH', PATH_HTDOCS . '/logs/');
             break;
 
         case GRM_STAGING:
@@ -54,7 +54,7 @@ if (defined('ENVIRONMENT'))
             define('PATH_SYSTEM', '');// ------------------------------- PRODUCTION SYSTEM DIR --
 
             define('LOG_THRESHOLD',0);
-            define('LOG_PATH', PATH_HTDOCS . 'logs/');
+            define('LOG_PATH', PATH_HTDOCS . '/logs/');
             error_reporting(0);
             break;
 
