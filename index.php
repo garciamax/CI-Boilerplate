@@ -40,7 +40,7 @@ if (defined('ENVIRONMENT'))
             define('PATH_HTDOCS', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
             define('PATH_APP', PATH_HTDOCS . 'app');
-            define('PATH_SYSTEM', '/Applications/MAMP/htdocs/system');// ---------------------- DEV SYSTEM DIR ---------
+            define('PATH_SYSTEM', '');// ---------------------- DEV SYSTEM DIR ---------
 
             define('LOG_THRESHOLD',4);
             define('LOG_PATH', PATH_APP . '/logs/');
